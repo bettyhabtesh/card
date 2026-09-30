@@ -12,9 +12,22 @@ export const profile = {
   github: "https://github.com/bettyhabtesh",
   linkedin: "https://www.linkedin.com/in/bethelhem-habtamu",
   portfolio: "https://bettyhabtesh.vercel.app",
-  siteUrl: "https://bettyhabtesh-card.vercel.app",
   ctaHeadline: "Let's build something great.",
 } as const;
+
+/** Resolved at runtime for SEO / sharing. Set NEXT_PUBLIC_SITE_URL in production. */
+export function getSiteUrl(): string {
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL;
+  }
+  if (process.env.VERCEL_PROJECT_PRODUCTION_URL) {
+    return `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`;
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}`;
+  }
+  return "http://localhost:3000";
+}
 
 export type ContactLink = {
   id: string;
@@ -83,14 +96,7 @@ export const projects: Project[] = [
     technologies: ["React", "Next.js", "TypeScript"],
     href: profile.portfolio,
   },
-  {
-    id: "tamcon-lottery-cloud",
-    name: "TAMCON Lottery Cloud",
-    description:
-      "Multi-tenant lottery and gaming SaaS frontend platform.",
-    technologies: ["React", "Next.js", "Tailwind CSS"],
-    href: profile.portfolio,
-  },
+
   {
     id: "cool-cute-react-time-picker",
     name: "cool-cute-react-time-picker",

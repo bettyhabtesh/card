@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Share2 } from "lucide-react";
-import { profile } from "@/data/profile";
+import { profile, getSiteUrl } from "@/data/profile";
 import { Toast } from "@/components/Toast";
 
 export function ShareButton() {
@@ -13,7 +13,7 @@ export function ShareButton() {
     const shareData = {
       title: `${profile.name} — ${profile.role}`,
       text: profile.tagline,
-      url: typeof window !== "undefined" ? window.location.href : profile.siteUrl,
+      url: typeof window !== "undefined" ? window.location.href : getSiteUrl(),
     };
 
     try {

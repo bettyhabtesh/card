@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { profile } from "@/data/profile";
+import { profile, getSiteUrl } from "@/data/profile";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,9 +18,10 @@ const geistMono = Geist_Mono({
 const title = `${profile.name} — ${profile.role}`;
 const description =
   "Bethelhem Habtamu is a frontend developer building modern, performant and user-focused web experiences.";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
-  metadataBase: new URL(profile.siteUrl),
+  metadataBase: new URL(siteUrl),
   title,
   description,
   applicationName: `${profile.name} Digital Card`,
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "profile",
     locale: "en_US",
-    url: profile.siteUrl,
+    url: siteUrl,
     title,
     description,
     siteName: profile.name,
@@ -49,7 +50,7 @@ export const metadata: Metadata = {
     lastName: profile.lastName,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title,
     description,
   },

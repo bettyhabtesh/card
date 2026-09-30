@@ -1,8 +1,10 @@
 import { DigitalCard } from "@/components/DigitalCard";
+import { JsonLd } from "@/components/JsonLd";
 
 export default function Home() {
   return (
     <main className="relative flex min-h-dvh flex-col items-center justify-center overflow-x-hidden px-4 py-10 sm:px-6 sm:py-14 md:py-16">
+      <JsonLd />
       {/* Quiet page atmosphere */}
       <div
         className="pointer-events-none absolute inset-0 -z-20 bg-[#09090B]"

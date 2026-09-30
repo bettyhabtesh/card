@@ -33,7 +33,11 @@ Connect this repository to Vercel, or run:
 npx vercel
 ```
 
-No special configuration is required.
+No special configuration is required. After you have a production domain, optionally set:
+
+```bash
+NEXT_PUBLIC_SITE_URL=https://your-card.vercel.app
+```
 
 ## Customize
 
@@ -43,7 +47,6 @@ Edit structured content in `src/data/profile.ts`:
 - contact links
 - skills
 - selected work projects
-- site URL used for SEO / sharing
 
 ## Features
 
@@ -51,5 +54,5 @@ Edit structured content in `src/data/profile.ts`:
 - Contact links (email, GitHub, LinkedIn, portfolio)
 - Save Contact (downloads a `.vcf` vCard)
 - Share via Web Share API with clipboard fallback
-- SEO metadata (Open Graph + Twitter)
+- SEO metadata (Open Graph + Twitter) + JSON-LD
 - Accessible focus states and reduced-motion support

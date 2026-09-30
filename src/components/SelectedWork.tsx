@@ -31,7 +31,7 @@ function ProjectItem({ project }: { project: Project }) {
         href={project.href}
         target="_blank"
         rel="noopener noreferrer"
-        className="group block rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 transition-all duration-200 hover:border-[#A78BFA]/20 hover:bg-white/[0.035] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A78BFA]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0c0b10] sm:p-4.5"
+        className="group block rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 transition-all duration-200 hover:border-[#A78BFA]/20 hover:bg-white/[0.035] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A78BFA]/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0c0b10] sm:p-5"
       >
         {content}
       </a>
@@ -39,7 +39,7 @@ function ProjectItem({ project }: { project: Project }) {
   }
 
   return (
-    <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 sm:p-4.5">
+    <div className="rounded-2xl border border-white/[0.06] bg-white/[0.02] p-4 sm:p-5">
       {content}
     </div>
   );

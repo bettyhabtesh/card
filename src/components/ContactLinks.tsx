@@ -1,11 +1,16 @@
-import { Mail, Github, Linkedin, ExternalLink } from "lucide-react";
+import {
+  MailIcon,
+  GitHubIcon,
+  LinkedInIcon,
+  LinkIcon,
+} from "@/components/icons";
 import { contactLinks, type ContactLink } from "@/data/profile";
 
 const iconMap = {
-  mail: Mail,
-  github: Github,
-  linkedin: Linkedin,
-  link: ExternalLink,
+  mail: MailIcon,
+  github: GitHubIcon,
+  linkedin: LinkedInIcon,
+  link: LinkIcon,
 } as const;
 
 function ContactItem({ link }: { link: ContactLink }) {
@@ -22,7 +27,6 @@ function ContactItem({ link }: { link: ContactLink }) {
       <Icon
         className="size-[1.05rem] shrink-0 text-[#8B8499] transition-colors duration-200 group-hover:text-[#C4B5FD]"
         strokeWidth={1.6}
-        aria-hidden="true"
       />
       <span>{link.label}</span>
     </a>
