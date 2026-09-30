@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <rect width="180" height="180" rx="40" fill="#0C0B10"/>
+  <rect x="2" y="2" width="176" height="176" rx="38" stroke="#A78BFA" stroke-opacity="0.35" stroke-width="2"/>
+  <text x="90" y="112" text-anchor="middle" font-family="ui-sans-serif, system-ui, sans-serif" font-size="64" font-weight="600" fill="#F5F3F7" letter-spacing="-1.5">BH</text>
+</svg>
